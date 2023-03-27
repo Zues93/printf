@@ -18,6 +18,7 @@ int flags, int width, int precision, int size)
 char c = va_arg(types, int);
 return (handle_write_char(c, buffer, flags, width, precision, size));
 }
+
 /************************* PRINT A STRING *************************/
 /**
  * print_string - Prints a string
@@ -68,6 +69,7 @@ return (width);
 }
 return (write(1, str, length));
 }
+
 /************************* PRINT PERCENT SIGN *************************/
 /**
  * print_percent - Prints a percent sign
@@ -90,6 +92,7 @@ UNUSED(precision);
 UNUSED(size);
 return (write(1, "%%", 1));
 }
+
 /************************* PRINT INT *************************/
 /**
  * print_int - Print int
@@ -126,6 +129,7 @@ num /= 10;
 i++;
 return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
+
 /************************* PRINT BINARY *************************/
 /**
  * print_binary - Prints an unsigned number
